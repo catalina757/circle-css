@@ -1,17 +1,22 @@
-body {
-    height: 100vh;
+:root {
+    --main-color: firebrick;
+    --border-color: yellow;
 }
 
-.box {
-    width: 20rem;
-    height: 15rem;
-    background-color: coral;
+body {
+    height: 100vh;
 }
 
 .centered {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.box {
+    width: 20rem;
+    height: 15rem;
+    background-color: coral;
 }
 
 .circle1 {
@@ -25,14 +30,14 @@ body {
 .all-circles {
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: firebrick;
+    background-color: var(--main-color);
 }
 
 .circle-animation {
-    border-right: 20px solid firebrick;
-    border-top: 20px solid yellow;
-    border-left: 20px solid firebrick;
-    border-bottom: 20px solid yellow;
+    border-right: 20px solid var(--main-color);
+    border-top: 20px solid var(--border-color);
+    border-left: 20px solid var(--main-color);
+    border-bottom: 20px solid var(--border-color);
     transform: rotate(45deg);
     animation-name: rotate-yellow-border;
     animation-duration: 3s;
@@ -45,9 +50,10 @@ body {
     animation-play-state: paused;
 }
 
-.border-none {
+.pause-button {
     border: none;
     transform: rotate(-45deg);
+    cursor: pointer;
 }
 
 @keyframes rotate-yellow-border {
