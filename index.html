@@ -5,81 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .box {
-            width: 20rem;
-            height: 15rem;
-            background-color: coral;
-        }
-
-        .centered {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .circle1 {
-            width: 10rem;
-        }
-
-        .circle2 {
-            width: 4rem;
-        }
-
-        .all-circles {
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            background-color: firebrick;
-        }
-
-        .circle-animation {
-            border-right: 20px solid firebrick;
-            border-top: 20px solid yellow;
-            border-left: 20px solid firebrick;
-            border-bottom: 20px solid yellow;
-            transform: rotate(45deg);
-            animation-name: rotate-yellow-border;
-            animation-duration: 3s;
-            animation-delay: 3s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-
-        .pause-animation {
-            animation-play-state: paused;
-        }
-
-        .border-none {
-            border: none;
-            transform: rotate(-45deg);
-        }
-
-        @keyframes rotate-yellow-border {
-            0%   {
-                transform: rotate(45deg);
-            }
-            25%  {
-                transform: rotate(90deg);
-            }
-            50%  {
-                transform: rotate(135deg);
-            }
-            75%  {
-                transform: rotate(180deg);
-            }
-            100% {
-                transform: rotate(225deg);
-            }
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    <title>Circle</title>
 </head>
 <body>
     <div class="box centered">
@@ -90,11 +17,6 @@
         </div>
     </div>
 
-    <script>
-        let pauseButton = document.getElementById("pauseButton");
-        pauseButton.addEventListener("click", function () {
-            document.getElementById("circle2").classList.toggle("pause-animation");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
