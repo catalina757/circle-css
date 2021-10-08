@@ -56,6 +56,10 @@ body {
     cursor: pointer;
 }
 
+.fa-pause {
+    color: var(--border-color);
+}
+
 @keyframes rotate-yellow-border {
     0%   {
         transform: rotate(45deg);
